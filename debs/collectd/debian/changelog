@@ -1,3 +1,10 @@
+collectd (5.12.0-ubuntu0) xenial; urgency=medium
+
+  * Bump to 5.12.0
+  * Add postgresql plugin
+
+ -- Osirium <support@osirium.com>  Mon, 23 Nov 2020 14:17:00 +0000
+
 collectd (5.6.2-ubuntu0) xenial; urgency=medium
 
   * Bump to 5.6.2
