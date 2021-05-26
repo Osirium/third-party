@@ -1,8 +1,8 @@
 # Privileged Access Management
 
-**[Privileged Access Security (PAS)](https://www.osirium.com/products/privileged-access-security)**  protects access to shared applications, services and devices.
+**[Privileged Access Security (PAS)](https://www.osirium.com/privileged-access-management)**  protects access to shared applications, services and devices.
 
-PAS looks beyond traditional [Privileged Access Management (PAM)](https://www.osirium.com/products/privileged-access-management) which protects and manages administrator or supervisor accounts. For the modern enterprise, PAS builds on this governance to streamline administrator workloads, securely automate business and IT processes, and removes risky local administrator accounts from endpoints.
+PAS looks beyond traditional [Privileged Access Management (PAM)](https://www.osirium.com/privileged-access-management) which protects and manages administrator or supervisor accounts. For the modern enterprise, PAS builds on this governance to streamline administrator workloads, securely automate business and IT processes, and removes risky local administrator accounts from endpoints.
 
 Privileged Access Management gives you control: the right access to the right accounts by the right people at the right times and protect the valuable IT infrastructure and assets.
 
@@ -25,7 +25,7 @@ Privileged Access Management gives you control: the right access to the right ac
 
 ## Session recording and auditing
 
-- [Privileged Session Management](https://www.osirium.com/products/pam-detail/pam-session-management)
+- [Privileged Session Management](https://www.osirium.com/product-details/session-management)
 
 ## Behavioural analytics
 
@@ -33,7 +33,7 @@ Privileged Access Management gives you control: the right access to the right ac
 
 ## MAP server
 
-- [Managed Application Proxy](https://www.osirium.com/products/pam-detail/pam-map-server)
+- [Managed Application Proxy](https://www.osirium.com/product-details/map-server)
 
 ## Building
 
