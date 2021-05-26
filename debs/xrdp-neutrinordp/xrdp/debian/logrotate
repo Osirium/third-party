@@ -1,9 +1,0 @@
-/var/log/osirium/xrdp/*.log {
-  daily
-  missingok
-  rotate 84
-  compress
-  delaycompress
-  notifempty
-  copytruncate
-}

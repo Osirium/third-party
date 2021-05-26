@@ -1,3 +1,0 @@
-#! /usr/bin/dh-exec
-sitecustomize.py etc/python2.7
-sitecustomize.py usr/lib/python2.7
