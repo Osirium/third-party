@@ -1,14 +1,16 @@
-def artifactoryServer = Artifactory.server 'artifactory-nossl'
+def artifactoryServer = Artifactory.server 'artifactory'
 def buildInfo = Artifactory.newBuildInfo()
 buildInfo.env.capture = true
 buildInfo.retention maxBuilds: 10, deleteBuildArtifacts: true
 
 pipeline {
     agent {
-        node 'xenial'
+        node {
+            label 'ubuntu18.04_builder_fast_track'
+        }
     }
     environment {
-        ARTIFACTORY = credentials('artifactory-jenkins-local')
+        ARTIFACTORY = credentials('jenkins_ad')
     }
     stages {
         stage('Build') {
@@ -34,7 +36,7 @@ pipeline {
         }
     }
     post {
-        success {
+        always {
             script {
                 artifactoryServer.publishBuildInfo buildInfo
             }
