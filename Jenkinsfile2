@@ -40,6 +40,7 @@ pipeline {
         always {
             script {
                 artifactoryServer.publishBuildInfo buildInfo
+                cleanWs()
             }
         }
     }
