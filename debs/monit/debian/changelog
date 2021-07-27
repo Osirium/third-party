@@ -1,4 +1,4 @@
-monit (5.28.0-ubuntu0) focal; urgency=medium
+monit (5.28.0-focal0) focal; urgency=medium
 
   * Bump to 5.28.0
 
