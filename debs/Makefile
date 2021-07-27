@@ -6,7 +6,7 @@ DEBS = $(patsubst $(ROOT_DIR)%/, %, $(filter %/, $(wildcard $(ROOT_DIR)*/)))
 
 $(DEBS):
 	cd $@; \
-		docker build . -f Dockerfile -t xenial/$@:amd64 \
-		&& docker run --rm -v "$(ROOT_DIR)../out:/out" xenial/$@:amd64
+		docker build . -f Dockerfile -t focal/$@:amd64 \
+		&& docker run --rm -v "$(ROOT_DIR)../out:/out" focal/$@:amd64
 
 all: $(DEBS)

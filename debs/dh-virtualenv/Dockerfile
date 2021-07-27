@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20171006
+FROM ubuntu:focal-20210713
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
@@ -7,19 +7,20 @@ RUN apt-get update \
       ca-certificates \
       curl \
       debhelper \
+      devscripts \
+      equivs \
       lsb-release \
-      python-sphinx \
-      python-mock \
-      python-setuptools \
       ;
 
 WORKDIR /build
 
-ADD https://github.com/spotify/dh-virtualenv/archive/1.0.tar.gz /build/dh-virtualenv_1.0.orig.tar.gz
+ADD https://github.com/spotify/dh-virtualenv/archive/1.2.2.tar.gz /build/dh-virtualenv_1.2.2.orig.tar.gz
 
-RUN tar xvpzf dh-virtualenv_1.0.orig.tar.gz
+RUN tar xvpzf dh-virtualenv_1.2.2.orig.tar.gz
 
-WORKDIR /build/dh-virtualenv-1.0
+WORKDIR /build/dh-virtualenv-1.2.2
+
+RUN apt-get update && mk-build-deps --install --tool 'apt-get --no-install-recommends -y' && rm *.deb
 
 VOLUME /out
 

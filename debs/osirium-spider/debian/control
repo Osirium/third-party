@@ -2,7 +2,7 @@ Source: osirium-spider
 Section: osirium
 Priority: optional
 Maintainer: Osirium <support@osirium.com>
-Build-Depends: debhelper (>= 8.0.0), libssl-dev, ant, openjdk-9-jdk-headless
+Build-Depends: debhelper (>= 8.0.0), libssl-dev, ant, openjdk-11-jdk-headless
 Standards-Version: 3.9.4
 Homepage: https://www.osirium.com
 
@@ -10,5 +10,5 @@ Package: osirium-spider
 Section: base
 Priority: optional
 Architecture: any
-Depends: openjdk-9-jre-headless, libxml2-utils
+Depends: openjdk-11-jre-headless, libxml2-utils
 Description: osirium-spider

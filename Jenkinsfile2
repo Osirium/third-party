@@ -24,8 +24,8 @@ pipeline {
                     def uploadSpec = """{
                         "files": [
                             {
-                                "pattern": "out/dists/xenial/main/binary-amd64/*.deb",
-                                "props": "deb.distribution=xenial;deb.component=main;deb.architecture=amd64",
+                                "pattern": "out/dists/focal/main/binary-amd64/*.deb",
+                                "props": "deb.distribution=focal;deb.component=main;deb.architecture=amd64",
                                 "target": "debian-local/pool/"
                             }
                         ]

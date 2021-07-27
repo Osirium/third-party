@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20171006
+FROM ubuntu:focal-20210713
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
