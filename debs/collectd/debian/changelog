@@ -1,4 +1,4 @@
-collectd (5.12.0-focal0) focal; urgency=medium
+collectd (5.12.0-ubuntu1) focal; urgency=medium
 
   * Bump to 5.12.0
   * Add postgresql plugin

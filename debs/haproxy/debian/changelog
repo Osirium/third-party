@@ -1,4 +1,4 @@
-haproxy (2.4.2-focal0) focal; urgency=medium
+haproxy (2.4.2-ubuntu1) focal; urgency=medium
 
   * Bump to 2.4.2 - EOL 2026-Q2 (LTS)
 
