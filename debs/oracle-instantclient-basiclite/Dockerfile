@@ -27,7 +27,7 @@ RUN alien oracle-instantclient-basiclite.rpm --scripts \
  && mkdir extracted \
  && dpkg-deb -R /build/source/oracle-instantclient-basiclite.deb extracted \
  && echo "Depends: libaio1" >> extracted/DEBIAN/control \
- && dpkg-deb -b extracted /build/oracle-instantclient-basiclite_$(dpkg-deb -f oracle-instantclient-basiclite.deb Version)_amd64.deb
+ && dpkg-deb -b extracted /build/oracle-instantclient-basiclite_$(dpkg-deb -f oracle-instantclient-basiclite.deb Version)_focal_amd64.deb
 
 CMD mkdir -p /out/dists/$( lsb_release -c -s )/main/binary-$( dpkg --print-architecture )/ \
     && dpkg -c /build/*.deb \
