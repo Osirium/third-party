@@ -1,7 +1,3 @@
-def artifactoryServer = Artifactory.server 'artifactory'
-def buildInfo = Artifactory.newBuildInfo()
-buildInfo.env.capture = true
-buildInfo.retention maxBuilds: 10, deleteBuildArtifacts: true
 
 pipeline {
     agent {
@@ -20,26 +16,13 @@ pipeline {
         }
         stage('Push') {
             steps {
-                script {
-                    def uploadSpec = """{
-                        "files": [
-                            {
-                                "pattern": "out/dists/xenial/main/binary-amd64/*.deb",
-                                "props": "deb.distribution=xenial;deb.component=main;deb.architecture=amd64",
-                                "target": "debian-local/pool/"
-                            }
-                        ]
-                    }"""
-                    artifactoryServer.upload(uploadSpec, buildInfo)
-                }
+                sh 'make upload'
             }
         }
     }
     post {
         always {
-            script {
-                artifactoryServer.publishBuildInfo buildInfo
-            }
+            cleanWs()
         }
     }
 }
