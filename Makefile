@@ -9,6 +9,7 @@ OUTPUT = $(wildcard $(ROOT_DIR)out/dists/focal/main/binary-amd64/*.deb)
 
 .PHONY: fix-permissions
 fix-permissions:
+	mkdir -p $(ROOT_DIR)out
 	docker run -v "$(abspath .):/third-party" ubuntu:focal-20210713  find /third-party/out -group root -exec chown $(UID):$(GID) {} \;
 
 .PHONY: clean
