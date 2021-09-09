@@ -25,4 +25,4 @@ $(DEBS):
 	$(MAKE) -C debs $(patsubst debs/%, %, $@)
 
 upload: $(OUTPUT)
-	$(foreach package, $(OUTPUT), curl -u "$(ARTIFACTORY_USR):$(ARTIFACTORY_PSW)" -H "Content-Type: multipart/form-data" --data-binary "@$(package)" "https://nexus.osirium.net/repository/third-party-focal/";)
+	$(foreach package, $(OUTPUT), curl -u "$(AD_USR):$(AD_PSW)" -H "Content-Type: multipart/form-data" --data-binary "@$(package)" "https://nexus.osirium.net/repository/third-party-focal/";)

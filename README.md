@@ -40,4 +40,4 @@ Privileged Access Management gives you control: the right access to the right ac
 This is a set of build containers for various packages, brought up to date for Focal 64 bits.
 
 - `make debs`: Create the debian packages.
-- `ARTIFACTORY_USR=[user] ARTIFACTORY_PSW=[password] make upload`: Push them to artifactory.
+- `AD_USR=[user] AD_PSW=[password] make upload`: Push them to Nexus repository manager.

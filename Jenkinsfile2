@@ -6,7 +6,7 @@ pipeline {
         }
     }
     environment {
-        ARTIFACTORY = credentials('jenkins_ad')
+        AD = credentials('jenkins_ad')
     }
     stages {
         stage('Build') {
